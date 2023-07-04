@@ -1,4 +1,19 @@
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@500&display=swap');
+
+h1 {
+    font-family: 'Roboto Mono', monospace;
+}
+
+h2 {
+    font-family: 'Quicksand', sans-serif;
+}
+
+h5 {
+    font-family: 'IBM Plex Sans', sans-serif;
+}
 
 * {
     margin: 0;
@@ -12,6 +27,61 @@ html {
 
 :root {}
 
+.search-bar-container {
+    margin-top: 2rem;
+    position: relative;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+.search-bar-container > input {
+    border-radius: 0.25rem;
+    width: 100%;
+    height: 3rem;
+    padding: 1rem;
+    z-index: 0;
+    outline: none;
+    border: none;
+}
+
+.search-icon-container {
+    position: absolute;
+    top: 0;
+    right: 1rem;
+}
+
+.search-button {
+    height: 3rem;
+    width: 3rem;
+    outline: none;
+    border: none;
+    background-color: transparent;
+}
+
+.search-button:hover {
+    cursor: pointer;
+}
+
+.timestamp {
+    text-align: center;
+    margin-top: 3rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    font-size: 1.5rem;
+    color: white;
+}
+
+.error-text {
+    position: absolute;
+    text-align: center;
+    top: 3.5rem;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 1rem;
+    font-weight: 700;
+    color: rgb(255, 131, 131);
+}
+
 img {
     max-width: 100%;
     height: auto;
@@ -21,5 +91,174 @@ img {
 
 body {
     max-width: 100vw;
-    min-height: 100vh;
+    height: 100vh;
+    font-family: 'montserrat', sans-serif;
+    background-image: url('../media/background.png');
+    background-size: cover;
+    background-position: top center;
+}
+
+.app-wrap {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    min-height: 100%;
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3));
+}
+
+/* Custom */
+  
+main {
+    width: 100%;
+    padding: 0 1rem;
+    display: flex;
+}
+
+.weather-info-container {
+    margin: 0 auto;
+    margin-top: 1.5rem;
+    border-radius: 4px;
+    background-color: white;
+    opacity: 0.6;
+    display: flex;
+}
+
+.location-container {
+    margin-left: 1rem;
+    margin: auto 0 auto 1rem;
+}
+
+.location > h2 {
+    font-size: 1.2rem;
+    color: #222;
+}
+
+.weather-info-main {
+    margin-left: auto;
+}
+
+.weather-meta {
+    display: flex;
+}
+
+.weather-icon {
+    width: 50%;
+    height: auto;
+    margin: 0 auto;
+}
+
+.temp-data {
+    /* margin-left: auto; */
+    margin: auto unset auto auto;
+    padding-right: 1rem;
+}
+
+.temp-container > h1 {
+    font-size: 1.4rem;
+    font-weight: 500;
+}
+
+.temp-desc {
+    display: none;
+    font-size: 1rem;
+}
+
+.feels-like {
+    display: none;
+}
+
+.feels-like > h2 {
+    display: none;
+    font-size: 0.9rem;
+}
+
+
+
+/* md */
+@media (min-width: 768px) {
+    main {
+        padding: 0 10rem;
+    }
+
+    .search-bar-container {
+        padding-left: 10rem;
+        padding-right: 10rem;
+        padding-top: 3rem;
+    }
+
+    .search-icon-container {
+        top: 3rem;
+        right: 10rem;
+    }
+
+    .timestamp {
+        padding-left: 10rem;
+        padding-right: 10rem;
+    }
+}
+
+/* lg */
+@media (min-width: 1024px) {
+    main {
+        padding: 0 20rem;
+    }
+
+    .weather-info-container {
+        display: inline-block;
+    }
+
+    .location-container {
+        margin-top: 0.5rem;
+    }
+
+    .location > h2 {
+        font-size: 1.4rem;
+    }
+
+    .weather-icon {
+        margin-left: 1rem;
+    }
+
+    .temp-data {
+        margin: auto unset auto 0;
+        display: flex;
+    }
+
+    .temp-container {
+        margin: auto 0;
+    }
+
+    .temp-container > h1 {
+        font-size: 1.6rem;
+    }
+
+    .temp-desc {
+        margin: auto 0 auto 1rem;
+        display: flex;
+    }
+
+    .feels-like {
+        display: flex;
+        margin-bottom: 1rem;
+        margin-top: 0.5rem;
+        margin-left: 1rem;
+    }
+
+    .feels-like > h2 {
+        display: flex;
+    }
+
+    .search-bar-container {
+        padding-left: 20rem;
+        padding-right: 20rem;
+    }
+
+    .search-icon-container {
+        right: 20rem;
+    }
+
+    .timestamp {
+        padding-left: 20rem;
+        padding-right: 20rem;
+    }
 }

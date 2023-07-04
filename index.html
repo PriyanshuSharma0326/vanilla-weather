@@ -3,14 +3,63 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <!-- <link rel="shortcut icon" href="" type="image/x-icon"> -->
+        <link rel="icon" href="media/cloudy.png" type="image/x-icon">
         <title>Vanilla Weather</title>
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
         <link rel="stylesheet" href="styles/normalize.css">
         <link rel="stylesheet" href="styles/style.css">
     </head>
     <body>
-        <main>
-        </main>
+        <div class="app-wrap">
+            <div class="search-bar-container">
+                <input id="input-location" placeholder='Search Location' value=''/>
+
+                <div class="search-icon-container">
+                    <button class="search-button">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </button>
+                </div>
+            </div>
+
+            <text class="error-text" id="error-text"></text>
+
+            <h1 class="timestamp" id="timestamp"></h1>
+
+            <main>
+                <div class="weather-info-container">
+                    <div class="location-container">
+                        <h2 id="location"></h2>
+                    </div>
+
+                    <div class="weather-info-main">
+                        <div class="weather-meta" className='flex'>
+                            <div class="weather-icon-container">
+                                <img id="weather-icon" class="weather-icon"
+                                    src=''
+                                    alt=''
+                                />
+                            </div>
+
+                            <div class="temp-data" className='ml-auto my-auto pr-4 lg:ml-0 lg:my-auto lg:flex'>
+                                <div class="temp-container" className='lg:my-auto'>
+                                    <h1 id="temp" className='text-[1.4rem] lg:text-[1.6rem] font-medium'></h1>
+                                </div>
+
+                                <div class="temp-desc" className='lg:my-auto lg:ml-4'>
+                                    <h2 id="weather-description" className='text-[1rem] hidden lg:flex'></h2>
+                                </div>
+                            </div>
+                        </div>
+                            
+                        <div class="feels-like" className='hidden lg:flex lg:mb-4 lg:mt-2 lg:ml-4'>
+                            <h2 className='text-[0.9rem] hidden lg:flex'>FeelsLike<span id="feels-like-temp"> </span>°</h2>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+
         <script src="./script.js"></script>
     </body>
 </html>
