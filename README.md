@@ -1,11 +1,12 @@
-# Weather Application - Vanilla JS
+# Weather Application
 
 This is a simple weather application that fetches weather information from the OpenWeatherMap API and displays it on the screen.
 
 ## Features
 
 - Fetches weather data from the OpenWeatherMap API
-- Displays current weather information, including temperature, feels like temperature, and weather conditions
+- Displays current weather information, including temperature, humidity, and weather conditions
+- Provides a search bar to enter city names and retrieve weather information for different locations
 - Beautifully designed user interface using HTML and CSS
 
 ## Screenshots
@@ -21,6 +22,7 @@ To use this weather application, follow these steps:
 3. Sign up for an API key at [OpenWeatherMap API](https://openweathermap.org/) (if you don't have one).
 4. Replace the placeholder API key in the `script.js` file with your own API key.
 5. Save the file and reload the application in the web browser.
+6. Enter the name of a city in the search bar and press Enter or click the search button to retrieve the weather information for that location.
 
 ## Technologies Used
 
