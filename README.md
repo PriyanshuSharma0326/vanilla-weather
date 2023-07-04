@@ -10,7 +10,7 @@ This is a simple weather application that fetches weather information from the O
 
 ## Screenshots
 
-![Design preview](./design/desktop-design.jpg)
+![Design preview](./design/desktop-design.jpeg)
 
 ## Usage
 
